@@ -1,2 +1,4 @@
 # devops-netology
-git config --global user.name
+
+добавил в файл .gitignore каталог /terraform закомитил файл .gitignore каталог terraform теперь не будет пушаться на сервер и каталог не виден при комманде git status соответственно и все файлы и подкаталоги папки terraform не будут сохраняться в проекте. Благодаря созданному файлу .gitignore будет игнорироваться локальная директория */.terraform/
+

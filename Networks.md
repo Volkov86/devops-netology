@@ -105,7 +105,7 @@ UNCONN     0          0              10.0.2.15%eth0:68                0.0.0.0:*
 
 **5.** Используя diagrams.net, создайте L3 диаграмму вашей домашней сети или любой другой сети, с которой вы работали. <br/>
 
-![diagrams](https://disk.yandex.ru/i/IfwN_D1th2VPeA) 
+![img_1.png](img_1.png)
 
 <br/><br/><br/>
 

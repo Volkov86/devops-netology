@@ -44,7 +44,8 @@ default via 10.0.2.2 dev eth0 proto dhcp src 10.0.2.15 metric 100
 10.0.2.2 dev eth0 proto dhcp scope link src 10.0.2.15 metric 100
 ```
 <br/>
-Добавил статические маршруты: <br/>
+
+- Добавил статические маршруты: <br/>
 
 ```shell
 vagrant@vagrant:~$ ip route show
@@ -89,7 +90,6 @@ tcp      LISTEN    0         128                 0.0.0.0:22              0.0.0.0
 tcp      LISTEN    0         128                    [::]:22                 [::]:*
 ```
 <br/>
-
 
 **4.** Проверьте используемые UDP сокеты в Ubuntu, какие протоколы и приложения используют эти порты? <br/>
 ```shell

@@ -1,20 +1,18 @@
-##         Домашнее задание к занятию "3.9. Элементы безопасности информационных систем" <br/><br/>
+##         Домашнее задание к занятию "3.9. Элементы безопасности информационных систем" <br/> <br/>
 
 
 **1.** Установите `Bitwarden` плагин для браузера. Зарегистрируйтесь и сохраните несколько паролей. <br/>
 
-![bit](C:\Users\mc-wo\Desktop\Bitwarden.png)
-
-
+![](../foto/Bitwarden.png)
 
 **2.** Установите `Google authenticator` на мобильный телефон. <br/>  Настройте вход в `Bitwarden` аккаунт через `Google authenticator` OTP. <br/><br/>
-![aut](C:\Users\mc-wo\Desktop\Google.png)
+![](../foto/Google.png)
 <br/>
 
 **3.** Установите `apache2`, сгенерируйте самоподписанный сертификат, настройте тестовый сайт для работы по HTTPS. <br/>
-![apache2](C:\Users\mc-wo\Desktop\sert.png)
+![](../foto/sert.png)
 <br/>
-![hhtps](C:\Users\mc-wo\Desktop\https.png)
+![](../foto/https.png)
 <br/>
 
 **4.** Проверьте на TLS уязвимости произвольный сайт в интернете (кроме сайтов МВД, ФСБ, МинОбр, НацБанк, РосКосмос, РосАтом, РосНАНО и любых госкомпаний, объектов КИИ, ВПК ... и тому подобное).<br/>
@@ -53,35 +51,33 @@ HOP RTT     ADDRESS
 OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 106.70 seconds
 ```
-![nmap](C:\Users\mc-wo\Desktop\testssl.sh.png)
-![nmap2](C:\Users\mc-wo\Desktop\nmap.png)
+![](../foto/testssl.sh.png)
+![](../foto/nmap.png)
 <br/>
-
 **5.** Установите на Ubuntu ssh сервер, сгенерируйте новый приватный ключ. <br/> Скопируйте свой публичный ключ на другой сервер. <br/> Подключитесь к серверу по SSH-ключу. <br/>
 
 Установил openssh-server: <br/>
 ```shell
 apt install openssh-server
 ```
-![ssh](C:\Users\mc-wo\Desktop\connect ssh devops2.png)
+![](../foto/connect ssh devops2.png)
 сгенерировал ключ:
 ```shell
 ssh-keygen -t rsa -b 4096 -f ~/.ssh/mykey -C "my@email.com"
 Your identification has been saved in /home/devops/.ssh/mykey
 Your public key has been saved in /home/devops/.ssh/mykey.pub
 ```
-![keygen](C:\Users\mc-wo\Desktop\keygen.png) <br/>
+![](../foto/keygen.png)
 скопировал публичный ключ на удаленный сервер: <br/>
 ```shell
 ssh-copy-id -i ~/.ssh/mykey devops2@192.168.247.138
 ```
-![copy_ser](C:\Users\mc-wo\Desktop\copy_sert.png) 
+![](../foto/copy_sert.png)
 подключился к удаленному серверу: <br/>
 ```shell
 `ssh -i ~/.ssh/mykey devops2@192.168.247.138`
 ```
-![connect](C:\Users\mc-wo\Desktop\connect.png)
-<br/>
+![](../foto/connect.png)
 
 **6.** Переименуйте файлы ключей из задания 5. Настройте файл конфигурации SSH клиента, так чтобы вход на удаленный сервер осуществлялся по имени сервера. <br/>
 ```shell
@@ -98,7 +94,7 @@ Port 22
 devops@vm1:~/.ssh$ ssh vm2
 Welcome to Ubuntu 22.04 LTS (GNU/Linux 5.15.0-41-generic x86_64)
 ```
-![vm2](C:\Users\mc-wo\Desktop\vm2.png) 
+![](../foto/vm2.png)
 
 **7.** Соберите дамп трафика утилитой tcpdump в формате pcap, 100 пакетов. Откройте файл pcap в Wireshark. <br/>
 ```shell
@@ -108,11 +104,11 @@ tcpdump: listening on ens33, link-type EN10MB (Ethernet), snapshot length 262144
 100 packets received by filter
 0 packets dropped by kernel
 ```
-![tcp_dump](C:\Users\mc-wo\Desktop\tcpdump.png)
+![](../foto/tcpdump.png)
 ```shell
 root@mc-volf:~# wireshark dump.pcap
 ```
-![wireshark](C:\Users\mc-wo\Desktop\wireshark.png)
+![](../foto/wireshark.png)
 ```shell
 root@mc-volf:~# tcpdump --list-interfaces
 1.ens33 [Up, Running, Connected]
@@ -125,7 +121,6 @@ root@mc-volf:~# tcpdump --list-interfaces
 8.dbus-system (D-Bus system bus) [none]
 9.dbus-session (D-Bus session bus) [none]
 ```
-
 **8**.* Просканируйте хост `scanme.nmap.org`. Какие сервисы запущены? <br/>
 ```shell
 root@mc-volf:~# nmap -Pn -F -T5 scanme.nmap.org 
@@ -163,5 +158,5 @@ Logging: on(low)
 Default: deny (incoming), allow (outgoing), disabled (routed)
 New profiles: skip
 ```
-![ufw](C:\Users\mc-wo\Desktop\ugw enable.png)
-![final](C:\Users\mc-wo\Desktop\final.png)
+![](../foto/ugw enable.png)
+![](../foto/final.png)

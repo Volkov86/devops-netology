@@ -1,4 +1,4 @@
-##                    Домашнее задание к занятию "3.5. Файловые системы" <br/> <br/> <br/>
+##                    Домашнее задание к занятию "3.5. Файловые системы" <br/> <br/>
 
 
 **1.** Узнайте о sparse (разряженных) файлах. <br/>
@@ -6,9 +6,7 @@
 Изучил. <br/>
 Основное преимущество в экономии дискового пространства и увеличение срока службы дисков. <br/><br/>
 
-
 **2.** Могут ли файлы, являющиеся жесткой ссылкой на один объект, иметь разные права доступа и владельца? Почему? <br/>
-
 
 Не могут, так как жесткие ссылки *(hardlink)* имеют ту же информацию inode и набор разрешений, что и у исходного файла. <br/>
 
@@ -28,7 +26,7 @@ total 82M
 [hardlink](https://disk.yandex.ru/d/Ipfs29pN37J4oA) <br/><br/>
 
 
-**3.** Сделайте vagrant destroy на имеющийся инстанс Ubuntu. Замените содержимое Vagrantfile следующим: <br/>
+**3.** Сделайте vagrant destroy на имеющийся `инстанс` Ubuntu. Замените содержимое Vagrantfile следующим: <br/>
 
 ``` shell
 Vagrant.configure("2") do |config|
@@ -44,7 +42,7 @@ Vagrant.configure("2") do |config|
 end
 ```
 Данная конфигурация создаст новую виртуальную машину с двумя дополнительными неразмеченными дисками по 2.5 Гб. <br/>
-[lsblk](https://disk.yandex.ru/i/bBq4yGnFmVnGTw) 
+[ls](https://disk.yandex.ru/i/bBq4yGnFmVnGTw) 
 <br/><br/>
 
 
@@ -89,7 +87,7 @@ Device     Boot   Start     End Sectors  Size Id Type
 /dev/sdc1          2048 4196351 4194304    2G 83 Linux
 /dev/sdc2       4196352 5242879 1046528  511M 83 Linux
 ```
-[sfdisk_force](https://disk.yandex.ru/i/CVwsET4xCijZ0w) [sfdisk_result](https://disk.yandex.ru/i/33tq8FVQab2RXw)
+[force](https://disk.yandex.ru/i/CVwsET4xCijZ0w) [result](https://disk.yandex.ru/i/33tq8FVQab2RXw)
 <br/><br/>
 
 **6.** Соберите `mdadm` **RAID1** на паре разделов 2 Гб. <br/>
@@ -233,10 +231,8 @@ sdc                         8:32   0  2.5G  0 disk
     └─vg1-lvol0           253:1    0  100M  0 lvm   /tmp/new
 
 ```
-[lsblk_result](https://disk.yandex.ru/i/YM2dgPtZ2wsf7A)
+[result](https://disk.yandex.ru/i/YM2dgPtZ2wsf7A)
 <br/><br/>
-
-
 
 **15.** Протестируйте целостность файла: <br/>
 ```shell
@@ -372,4 +368,4 @@ $ vagrant destroy
 ==> default: Forcing shutdown of VM...
 ==> default: Destroying VM and associated drives...
 ```
-<br/><br/>
+<br/>

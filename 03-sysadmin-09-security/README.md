@@ -87,7 +87,7 @@ ssh-copy-id -i ~/.ssh/mykey devops2@192.168.247.138
 
 - Подключился к удаленному серверу: <br/>
 ```shell
-`ssh -i ~/.ssh/mykey devops2@192.168.247.138`
+ssh -i ~/.ssh/mykey devops2@192.168.247.138
 ```
 ![](connect.png)
 

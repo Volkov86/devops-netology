@@ -3,16 +3,21 @@
 
 **1.** Установите `Bitwarden` плагин для браузера. Зарегистрируйтесь и сохраните несколько паролей. <br/>
 
-![](../foto/Bitwarden.png)
+![](Bitwarden.png)
+
+<br/>
 
 **2.** Установите `Google authenticator` на мобильный телефон. <br/>  Настройте вход в `Bitwarden` аккаунт через `Google authenticator` OTP. <br/><br/>
-![](../foto/Google.png)
+![](Google.png)
+
 <br/>
 
-**3.** Установите `apache2`, сгенерируйте самоподписанный сертификат, настройте тестовый сайт для работы по HTTPS. <br/>
-![](../foto/sert.png)
+**3.** Установите `apache2`, сгенерируйте самоподписанный сертификат, настройте тестовый сайт для работы по HTTPS. <br/> <br/>
+![](sert.png)
+
 <br/>
-![](../foto/https.png)
+
+![](https.png)
 <br/>
 
 **4.** Проверьте на TLS уязвимости произвольный сайт в интернете (кроме сайтов МВД, ФСБ, МинОбр, НацБанк, РосКосмос, РосАтом, РосНАНО и любых госкомпаний, объектов КИИ, ВПК ... и тому подобное).<br/>
@@ -51,33 +56,40 @@ HOP RTT     ADDRESS
 OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 106.70 seconds
 ```
-![](../foto/testssl.sh.png)
-![](../foto/nmap.png)
+![](testssl.sh.png)
+
 <br/>
+
+![](nmap.png)
+
+<br/>
+
 **5.** Установите на Ubuntu ssh сервер, сгенерируйте новый приватный ключ. <br/> Скопируйте свой публичный ключ на другой сервер. <br/> Подключитесь к серверу по SSH-ключу. <br/>
 
-Установил openssh-server: <br/>
+- Установил openssh-server: <br/>
 ```shell
 apt install openssh-server
 ```
-![](../foto/connect ssh devops2.png)
-сгенерировал ключ:
+![](connect ssh devops2.png)
+
+- Сгенерировал ключ:
 ```shell
 ssh-keygen -t rsa -b 4096 -f ~/.ssh/mykey -C "my@email.com"
 Your identification has been saved in /home/devops/.ssh/mykey
 Your public key has been saved in /home/devops/.ssh/mykey.pub
 ```
-![](../foto/keygen.png)
-скопировал публичный ключ на удаленный сервер: <br/>
+![](keygen.png)
+- Скопировал публичный ключ на удаленный сервер: <br/>
 ```shell
 ssh-copy-id -i ~/.ssh/mykey devops2@192.168.247.138
 ```
-![](../foto/copy_sert.png)
-подключился к удаленному серверу: <br/>
+![](copy_sert.png)
+
+- Подключился к удаленному серверу: <br/>
 ```shell
 `ssh -i ~/.ssh/mykey devops2@192.168.247.138`
 ```
-![](../foto/connect.png)
+![](connect.png)
 
 **6.** Переименуйте файлы ключей из задания 5. Настройте файл конфигурации SSH клиента, так чтобы вход на удаленный сервер осуществлялся по имени сервера. <br/>
 ```shell
@@ -94,7 +106,8 @@ Port 22
 devops@vm1:~/.ssh$ ssh vm2
 Welcome to Ubuntu 22.04 LTS (GNU/Linux 5.15.0-41-generic x86_64)
 ```
-![](../foto/vm2.png)
+
+![](vm2.png)
 
 **7.** Соберите дамп трафика утилитой tcpdump в формате pcap, 100 пакетов. Откройте файл pcap в Wireshark. <br/>
 ```shell
@@ -104,11 +117,11 @@ tcpdump: listening on ens33, link-type EN10MB (Ethernet), snapshot length 262144
 100 packets received by filter
 0 packets dropped by kernel
 ```
-![](../foto/tcpdump.png)
+![](tcpdump.png)
 ```shell
 root@mc-volf:~# wireshark dump.pcap
 ```
-![](../foto/wireshark.png)
+![](wireshark.png)
 ```shell
 root@mc-volf:~# tcpdump --list-interfaces
 1.ens33 [Up, Running, Connected]
@@ -158,5 +171,8 @@ Logging: on(low)
 Default: deny (incoming), allow (outgoing), disabled (routed)
 New profiles: skip
 ```
-![](../foto/ugw enable.png)
-![](../foto/final.png)
+![](ugw enable.png)
+
+<br/>
+
+![](final.png)

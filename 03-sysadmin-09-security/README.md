@@ -70,7 +70,7 @@ Nmap done: 1 IP address (1 host up) scanned in 106.70 seconds
 ```shell
 apt install openssh-server
 ```
-![](connect ssh devops2.png)
+![](sshdevops2.png)
 
 - Сгенерировал ключ:
 ```shell
@@ -171,7 +171,7 @@ Logging: on(low)
 Default: deny (incoming), allow (outgoing), disabled (routed)
 New profiles: skip
 ```
-![](ugw enable.png)
+![](ugw.png)
 
 <br/>
 

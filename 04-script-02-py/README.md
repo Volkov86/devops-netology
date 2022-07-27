@@ -132,8 +132,9 @@ for result in result_os.split('\n'):
 if is_change == False:
     print ("Modified files not found.")
 ```
-![](skript2.2.png) ![](Modified files.png)
-![](repo_3.png)
+![](skript2.2.png) ![](repo_3.png) <br/>
+![](Modified files.png) <br/>
+
 
 ## Обязательная задача 4  <br/>
 

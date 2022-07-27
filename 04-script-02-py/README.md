@@ -18,7 +18,7 @@ c = a + b
 |Как получить для переменной`c`значение 12?|???
 |Как получить для переменной`c`значение 3?|??? <br/>
 
-###Ответ: <br/>
+### Ответ: <br/>
 
 `c= a + b` <br/>
 TypeError: unsupported operand type(s) for +: 'int' and 'str'
@@ -26,8 +26,8 @@ TypeError: unsupported operand type(s) for +: 'int' and 'str'
 |Вопросы|Ответы|
 |-------|------|
 |Какое значение будет присвоено переменной`c`|Сложение числа и строки вызовет ошибку, значение не присвоено
-|Как получить для переменной`c`значение 12?|Преобразовать a в строку:`c=str(a)+b`
-|Как получить для переменной`c`значение 3?|Преобразовать b в число:`c=a+int(b)`
+|Как получить для переменной`c`значение 12?|Преобразовать`a`в строку:`c=str(a)+b`
+|Как получить для переменной`c`значение 3?|Преобразовать`b`в число:`c=a+int(b)`
 
 ![](3.png) ![](12.png) <br/>
 ![](skript.py3.png) ![](skript.py12.png) <br/>
@@ -132,8 +132,8 @@ for result in result_os.split('\n'):
 if is_change == False:
     print ("Modified files not found.")
 ```
-![](skript2.2.png) ![](Modified files.png)![](repo_3.png)
-<br/>
+![](skript2.2.png) ![](Modified files.png)
+![](repo_3.png)
 
 ## Обязательная задача 4  <br/>
 
@@ -148,6 +148,8 @@ if is_change == False:
 ```
 ???
 ```
+### Ответ: <br/>
+
 **Скрипт:** <br/>
 ```shell
 #!/usr/bin/env python3
